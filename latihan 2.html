@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <h2>Program Hitung Diskon Nama Kita</h2>
+        <label>Total Belanja</label>
+        <input type="number" id="totalBelanja" value="600000">
+        <br><br>
+        <label>Member:</label>
+        <select id="member">
+            <option value="Ya">Non-Member</option>
+            <option value="Tidak">Member</option>
+        </select>
+        <br><br>
+        <button onclick="hitungDiskon()">Cek Diskon</button>
+        <div id="hasil"></div>
+    </div>
+</div>
+<script>
+    function hitungDiskon() {
+        let totalBelanja = parseFloat(document.getElementById("totalBelanja").value);
+        let member = document.getElementById("member").value;
+        
+        if (totalBelanja >= 500000 && member === "Ya") {
+            document.getElementById("hasil").innerHTML = "Diskon 10%";
+        } else {
+            document.getElementById("hasil").innerHTML = "Tidak diskon";
+        }
+        
+    }
+</script>
+</body>
+</html>
