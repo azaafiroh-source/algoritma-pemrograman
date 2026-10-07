@@ -1,0 +1,22 @@
+MULAI
+    // Membaca input dari user
+    INPUT username
+    INPUT password
+
+    // Logika pengecekan menggunakan IF bertingkat dan kondisi AND
+    IF (username == "admin") AND (password == "admin123") THEN
+        status <- "login ke page admin"
+        
+    ELSE IF (username == "dosen") AND (password == "dosen111") THEN
+        status <- "login ke page dosen"
+        
+    ELSE IF (username == "mahasiswa") AND (password == "mahasiswa123") THEN
+        status <- "login ke page mahasiswa"
+        
+    ELSE
+        status <- "user dan pasword salah"
+    ENDIF
+
+    // Menampilkan status hasil login
+    CETAK status
+SELESAI
